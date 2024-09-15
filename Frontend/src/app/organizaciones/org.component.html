@@ -1,0 +1,35 @@
+<!-- Bloque de portada -->
+<section class="dark-overlay-section">
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col text-center">
+        <h1>Organizaciones</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- introduccion -->
+<section class="introduction cuerpo py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h2 class="section-subtitle py-4">Comprometidos con la protección del medio ambiente marino</h2>
+        <p class="section-text">Nuestra misión es promover la participación activa de la comunidad en la protección y conservación de nuestros mares, fomentando la colaboración con otras organizaciones y entidades comprometidas con el mismo propósito. Trabajamos en estrecha colaboración con voluntarios, ONGs y autoridades locales para impulsar un cambio positivo y crear un futuro sostenible para las generaciones venideras.</p>
+        <p class="section-text">En OceanClean, creemos en la importancia de unir esfuerzos para lograr un impacto duradero. Valoramos la transparencia, la responsabilidad y el trabajo en equipo. Nuestro objetivo es generar conciencia y promover la acción colectiva para proteger nuestros mares y playas de la contaminación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Organizaciones -->
+<div class="container lista cuerpo">
+  <div class="row py-4" *ngFor="let org of orgs">
+    <hr class="separator">
+    <div class="col-md-6">
+      <h1 class="py-3">{{ org.nameOrg }}</h1>
+      <p>{{ org.descOrg }}</p>
+    </div>
+    <div class="col-md-6">
+      <img [src]="org.imageOrg" alt="Logo de la organización">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container-fluid contenedor justify-content-center cuerpo">
+    <div class="row justify-content-center">
+        <div class="col-md-12 bloque">
+            <h1 class="text-center">Inicio de Sesión</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="loginInput" class="form-label">Login</label>
+                    <input type="text" class="form-control" id="loginInput" placeholder="Ingrese su login">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Ingrese su password">
+                    <div *ngIf="userError" id="aviso" class="my-2">
+                        <p>Usuario y/o Contraseña incorrecto</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="/registro">¿No tienes cuenta? Crea una cuenta aquí</a>
+                </div>
+                <div class="row justify-content-center boton">
+                    <button type="button" class="btn btn-primary" (click)="login()">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

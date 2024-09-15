@@ -1,0 +1,137 @@
+<div class="container-fluid contenedor justify-content-center cuerpo">
+  <div class="row justify-content-center">
+    <div class="col-md-6 bloque">
+      <div class="mb-3">
+        <div class="text-center justify-content-center button-container">
+          <ng-container *ngIf="user && user.length > 0 && user[0].roleUser !== undefined && user[0].roleUser === 0; else modificarButton">
+            <button type="button" class="btn btn-primary centered-button" [routerLink]="'/crearCampana'">Crear Campaña</button>
+          </ng-container>
+          <ng-template #modificarButton>
+            <button type="button" class="btn btn-success centered-button" [routerLink]="'/modificar'">Modificar Perfil</button>
+          </ng-template>
+        </div>
+      </div>
+      <div class="container-fluid justify-content-center text-center">
+        <div class="row justify-content-center">
+          <div class="col-12 userImgCont" *ngFor="let u of user">
+            <div *ngIf="user.length > 0 && user[0].roleUser === 0; else elseProfile">
+              <img [src]="u.photoUser" alt="" class="admin">
+            </div>
+            <ng-template #elseProfile>
+              <img [src]="'../../assets/img/' + u.photoUser + 'User.jpg'" alt="Imagen del usuario" class="basic">
+            </ng-template>
+          </div> 
+          <div class="col-12 dato" *ngFor="let u of user">
+            <h1 class="card-text">{{ u.userNameUser }}</h1>
+          </div> 
+          <div class="col-12 dato" *ngFor="let u of user">
+            <p class="card-text"><strong>Nombre</strong>: {{ u.nameUser }}</p>
+          </div>
+          <div *ngIf="user.length > 0 && user[0].roleUser !== 0;" class="">
+            <div class="col-12 mb-3" *ngFor="let u of user">
+              <p class="card-text"><strong>Apellidos</strong>: {{ u.surnameUser +" "+ u.secondSurnameUser }}</p>
+            </div>
+            <div class="col-12" *ngFor="let u of user">
+              <p class="card-text"><strong>Fecha de Nacimiento</strong>: {{ u.birthDateUser | date:'dd/MM/yyyy' }}</p>
+            </div>
+          </div>
+          <div class="col-12 dato" *ngFor="let u of user">
+            <p class="card-text"><strong>Correo Electrónico</strong>: {{ u.emailUser }}</p>
+          </div> 
+          <div class="col-12 dato" *ngFor="let u of user">
+            <p class="card-text"><strong>Teléfono</strong>: {{ u.phoneUser }}</p>
+          </div>
+          <div class="col-12 dato" *ngFor="let u of user">
+            <div *ngIf="u.addressUser.trim() !== ''">
+              <p class="card-text"><strong>Dirección</strong>: {{ u.addressUser }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h1 class="card-text">Campañas</h1>
+      <!-- Admin -->
+      <div *ngIf="user.length > 0 && user[0].roleUser === 0; else elseBlock">
+      <!-- Selector -->
+        <div class="container-fluid text-right my-5 cuerpoSelect">
+          <div class="row">
+            <div class="col-6">
+              <div class="d-inline-flex selector">
+                <p class="me-2">Filtro por provincias:</p>
+                <select class="form-select" [(ngModel)]="provinciaSeleccionada" (change)="aplicarFiltro()">
+                  <option value="">Todas las provincias</option>
+                  <option value="Almería">Almería</option>
+                  <option value="Granada">Granada</option>
+                  <option value="Málaga">Málaga</option>
+                  <option value="Jaén">Jaén</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Cádiz">Cádiz</option>
+                  <option value="Huelva">Huelva</option>
+                  <option value="Sevilla">Sevilla</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Campañas Admin -->
+        <div class="card mb-3" *ngFor="let ac of filteredCamps">
+          <img [src]="ac.imageCamp" (error)="handleImageErrorCamp($event)" class="card-img-top" alt="imagen de al campaña">
+          <div class="card-body campaingsBloq">
+            <div class="d-flex justify-content-end">
+              <img [src]="ac.imageOrg" (error)="handleImageErrorOrg($event)" class="org-logo" alt="logo de la organizacion">
+            </div>
+            <h5 class="card-title">{{ ac.nameCamp }}</h5>
+            <div class="row">
+              <div class="col">
+                <p><strong>Provincia:</strong> {{ ac.provinceCamp }}</p>
+                <p><strong>Dirección:</strong> {{ ac.addressCamp }}</p>
+                <p><strong>Fecha:</strong> {{ ac.dateCamp | date:'dd/MM/yyyy' }}</p>
+                <p><strong>Hora:</strong> {{ ac.hourCamp.slice(0, 5) }}</p>
+                <p><strong>Participantes:</strong> {{ ac.countPart }}</p>
+              </div>
+              <div class="col">
+                <p><strong>Descripción:</strong></p>
+                <p>{{ ac.descCamp }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button type="button" class="btn btn-danger" (click)="delAdminCampana(ac.idCamp)">Borrar <i class="bi bi-trash-fill"></i></button>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn btn-success" (click)="modAdminCampana(ac.idCamp)">Modificar</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <!--Campañas  -->
+      <ng-template #elseBlock>
+        <div class="card mb-3" *ngFor="let c of camp">
+          <img [src]="c.imageCamp" (error)="handleImageErrorCamp($event)" class="card-img-top" alt="imagen de la campaña">
+          <div class="card-body campaingsBloq">
+            <div class="d-flex justify-content-end">
+              <img [src]="c.imageOrg" (error)="handleImageErrorOrg($event)" class="org-logo" alt="logo de la organizacion">
+            </div>
+            <h5 class="card-title my-4">{{ c.nameCamp }}</h5>
+            <div class="row">
+              <div class="col">
+                <p><strong>Provincia:</strong> {{ c.provinceCamp }}</p>
+                <p><strong>Dirección:</strong> {{ c.addressCamp }}</p>
+                <p><strong>Fecha:</strong> {{ c.dateCamp | date:'dd/MM/yyyy' }}</p>
+                <p><strong>Hora:</strong> {{ c.hourCamp.slice(0, 5) }}</p>
+              </div>
+              <div class="col">
+                <p><strong>Descripción:</strong></p>
+                <p>{{ c.descCamp }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <button type="button" class="btn btn-danger" (click)="desapuntarse(c.idCamp)">Desapuntarse <i class="bi bi-box-arrow-up-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>

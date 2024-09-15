@@ -1,0 +1,205 @@
+.color{--prussian-blue: #012a4aff;}
+.color{--indigo-dye: #013a63ff;}
+.color{--indigo-dye-2: #01497cff;}
+.color{--indigo-dye-3: #014f86ff;}
+.color{--ucla-blue: #2a6f97ff;}
+.color{--cerulean: #2c7da0ff;}
+.color{--air-force-blue: #468fafff;}
+.color{--air-superiority-blue: #61a5c2ff;}
+.color{--sky-blue: #89c2d9ff;}
+.color{--light-blue: #a9d6e5ff;}
+/* Navbar */
+.navbar {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  background-color: #012a4aff;
+}
+
+
+.mi-perfil-container a {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #a9d6e5ff; /* Ajusta el color del enlace según tu preferencia */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mi-perfil-container a:hover {
+  color: #2c7da0ff;
+  transform: translate(0, -3px); /* Ajusta la cantidad de desplazamiento vertical */
+ 
+}
+
+.mi-perfil-container a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Ajusta la distancia del levantamiento */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Ajusta el grosor del levantamiento */
+  background-color: #2c7da0ff; /* Ajusta el color del levantamiento */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.mi-perfil-container a:hover:before {
+  transform: scaleX(1);
+}
+
+#logo{
+    height: 8rem;
+}
+#imgUser{
+  display: block;
+  width: 100px; /* Ajustar el tamaño de la imagen al contenedor */
+  height: auto; 
+  overflow: hidden; 
+}
+#imgUserAdmin{
+  background-color: white;
+  display: block;
+  width: 100px; /* Ajustar el tamaño de la imagen al contenedor */
+  height: auto; 
+  overflow: hidden; 
+}
+.userImgCont {
+  display: inline-block;
+  border: 3px solid white; 
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+.mi-perfil-container{
+  margin-left: 0.5rem;
+  align-items: center;
+}
+/* Footer */
+.footer{
+  overflow-x: hidden;
+  font-family: 'Oswald', sans-serif;
+  font-size: x-large;
+  background-color: #012a4aff;
+}
+#logoFooter{
+  height: 20rem;
+  width: auto;
+}
+.footerTitle{
+  font-size: x-large;
+  color: #2a6f97ff;
+}
+.enlaceFooter{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #a9d6e5ff; /* Ajusta el color del enlace según tu preferencia */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.enlaceFooter:hover{
+  color: #2c7da0ff;
+  transform: translate(0, -3px); /* Ajusta la cantidad de desplazamiento vertical */
+}
+
+.enlaceFooter:before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Ajusta la distancia del levantamiento */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Ajusta el grosor del levantamiento */
+  background-color: #2c7da0ff; /* Ajusta el color del levantamiento */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.footer a:hover:before {
+  transform: scaleX(1);
+}
+.footerRow{
+  padding-top: 3rem;
+}
+.footerRow a{
+  padding-bottom: 1rem;
+}
+.enlacesBloq{
+  padding-bottom: 2rem;
+}
+.logoBloq{
+  padding-bottom: 2rem;
+}
+.networkBloq{
+  padding-top: 9%;
+}
+
+#instagram{
+  color: deeppink;
+}
+#instagram:before{
+  background-color: deeppink;
+}
+#twitter{
+  color: cyan;
+}
+#twitter:before{
+  background-color: cyan;
+}
+#linkedin{
+  color: rgb(255, 255, 255);
+}
+#linkedin:before{
+  background-color: rgb(255, 255, 255);
+}
+
+
+.cerrarSession{
+  background-color: red !important;
+  color: white !important;
+}
+.cerrarSession:hover{
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #012a4aff;
+  border: none;
+  color: #a9d6e5ff;
+  padding: 8px 16px;
+  font-size: var(--bs-nav-link-font-size);;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #013a63ff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  display: none;
+}
+
+.dropdown-menu a {
+  color: #a9d6e5ff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu:hover a {
+  background-color: #013a63ff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-item{
+  cursor: pointer;
+}

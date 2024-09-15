@@ -1,0 +1,93 @@
+<!-- Bloque de portada -->
+<section class="dark-overlay-section">
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col text-center">
+        <h1>Nuestro compromiso</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Texto1 -->
+<section id="historia-organizacion" class="section cuerpo">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 py-5">
+        <h1 class="section-title py-3">Nuestra Historia</h1>
+        <h2 class="section-subtitle py-3">Un sueño convertido en realidad</h2>
+        <p>¡Hola! Soy Andrés, un apasionado de la conservación del medio ambiente y las playas. A mis 27 años, decidí emprender un proyecto que acercara las campañas de recogida de basuras a las personas y promoviera una mayor conciencia sobre la importancia de mantener nuestras playas limpias.</p>
+        <p>La idea de OceanClean surgió de mi amor por el mar y mi deseo de hacer una diferencia significativa en la protección de nuestros océanos. He creado una plataforma que conecte a las ONGs y a la comunidad en general en la lucha contra la contaminación marina.</p>
+      </div>
+      <div class="col-lg-6 px-5 py-5">
+        <img src="../../assets/img/Equipo.jpg" alt="Imagen del equipo de desarrollo" class="img-fluid">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 py-5">
+        <h1 class="section-subtitle py-3">Nuestro Compromiso</h1>
+        <p>En OceanClean, nos esforzamos por crear conciencia y promover acciones concretas para preservar la belleza natural de nuestras playas. Creemos que cada pequeño gesto cuenta y que todos podemos contribuir a un cambio positivo en nuestro entorno marino.</p>
+        <p>Nuestro enfoque se basa en la colaboración con ONGs locales, voluntarios y empresas comprometidas. Juntos, organizamos campañas de recogida de basuras, ofrecemos talleres educativos y fomentamos el uso responsable de los recursos naturales.</p>
+        <p>Queremos inspirar a más personas a unirse a nuestra causa y difundir el mensaje de la importancia de cuidar nuestras playas y mares. A través de la participación activa y el trabajo en equipo, podemos lograr un cambio significativo y proteger nuestro precioso ecosistema marino para las generaciones futuras.</p>
+        <p>¡Te invitamos a unirte a nosotros en esta misión! Juntos, podemos marcar la diferencia y crear un futuro más limpio y sostenible para todos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Call Action --> 
+<div class="container-fluid bloq1">
+  <div class="callAction">
+    <div class="row align-items-center">
+      <div class="col-md-4 callActionCol">
+        <div class="text-center">
+          <h5>Usuarios registrados</h5>
+          <p class="fs-1" *ngIf="numUser && numUser.length > 0">{{numUser[0].num_users}}</p>
+        </div>
+      </div>
+      <div class="col-md-4 callActionCol">
+        <div class="text-center">
+          <h5>Campañas creadas</h5>
+          <p class="fs-1" *ngIf="numCamp && numCamp.length > 0">{{numCamp[0].num_camp}}</p>
+        </div>
+      </div>
+      <div class="col-md-4 callActionCol">
+        <div class="text-center">
+          <h5>Organizaciones activas</h5>
+          <p class="fs-1" *ngIf="numOrg && numOrg.length > 0">{{numOrg[0].num_org}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Texto2 -->
+<section id="mision-vision" class="section cuerpo">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-lg-6">
+        <h1 class="section-title">Misión</h1>
+        <h2 class="section-subtitle py-3">Nuestro propósito y enfoque</h2>
+        <p>En OceanClean, nuestra misión es promover la conservación de las playas y los ecosistemas marinos a través de campañas de recogida de basuras y concienciación pública. Nos esforzamos por lograr un cambio positivo en la forma en que las personas interactúan con el medio ambiente costero y fomentamos la adopción de prácticas sostenibles.</p>
+        <p>Trabajamos en colaboración con ONGs, voluntarios y autoridades locales para organizar y ejecutar campañas de limpieza en diferentes playas, educar a la comunidad sobre la importancia de mantener nuestras costas limpias y crear conciencia sobre los impactos negativos de la contaminación marina.</p>
+      </div>
+      <div class="col-lg-6">
+        <h1 class="section-titlepy-3">Visión</h1>
+        <h2 class="section-subtitle py-3">Nuestro horizonte a largo plazo</h2>
+        <p>Nuestra visión es crear un mundo donde las playas sean entornos prístinos y libres de contaminación, donde la vida marina florezca y las generaciones futuras puedan disfrutar de su belleza natural. Deseamos ver un cambio cultural en el que el cuidado del medio ambiente marino sea una prioridad para todos, y donde la participación activa en la conservación de las playas sea una práctica común.</p>
+        <p>Nos esforzamos por lograr una mayor conciencia pública sobre la importancia de mantener nuestras playas limpias y saludables, y trabajamos para generar un impacto duradero en la protección de los ecosistemas marinos.</p>
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col-lg-12">
+        <h1 class="section-title py-3">Valores y Principios</h1>
+        <h2 class="section-subtitle py-3">Nuestra guía en la toma de decisiones</h2>
+        <ul>
+          <li><strong>Compromiso con la sostenibilidad:</strong> Nos comprometemos a promover prácticas sostenibles y responsables con el medio ambiente en todas nuestras actividades.</li>
+          <li><strong>Colaboración:</strong> Valoramos la colaboración con ONGs, voluntarios y autoridades locales para maximizar el impacto de nuestras acciones y fomentar una cultura de trabajo en equipo.</li>
+          <li><strong>Transparencia:</strong> Nos regimos por la transparencia en nuestras operaciones y nos esforzamos por mantener una comunicación clara y abierta con todas las partes interesadas.</li>
+          <li><strong>Respeto:</strong> Respetamos la diversidad, la inclusión y los derechos de todos, y promovemos un entorno de trabajo y participación respetuoso.</li>
+          <li><strong>Innovación:</strong> Buscamos constantemente nuevas formas de abordar los desafíos ambientales y desarrollar soluciones creativas y efectivas para la protección de las playas y los mares.</li>
+        </ul>
+        <p>Estos valores fundamentales guían nuestras decisiones diarias y nos ayudan a cumplir nuestra misión y visión. Nos esforzamos por ser un ejemplo de integridad y compromiso en la protección del medio ambiente marino.</p>
+      </div>
+    </div>
+  </div>
+</section>

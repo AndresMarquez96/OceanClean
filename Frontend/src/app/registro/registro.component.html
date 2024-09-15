@@ -1,0 +1,127 @@
+<div class="container-fluid contenedor justify-content-center cuerpo">
+    <div class="row justify-content-center contenido">
+        <div class="col-md-12 bloque">
+            <h1 class="text-center">Registro</h1>
+            <form>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="userNameUser" class="form-label">Usuario*</label>
+                        <input type="text" class="form-control" id="userNameUser" name="userNameUser">
+                        <div *ngIf="userError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                        <div *ngIf="userEqError" id="aviso" class="my-2">
+                            <p>El nombre de usuario ya esta en uso</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="passUser" class="form-label">Contraseña*</label>
+                        <input type="password" class="form-control" id="passUser" name="passUser">
+                        <div *ngIf="passError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                        <div *ngIf="passSizeError" id="aviso" class="my-2">
+                            <p>Debe tener mínimo 8 caracteres</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 text-center">
+                    <label for="photoUser" class="form-label">Foto*</label>
+                    <div class="d-flex justify-content-center">
+                        <div class="form-check me-3">
+                            <label class="form-check-label" for="photoOption1">
+                                <img src="../../assets/img/1User.jpg" alt="Imagen banco de peces" id="photoOption">
+                            </label>
+                            <input class="form-check-input" type="radio" name="photoUser" id="photoOption1" value="1">
+                        </div>
+                        <div class="form-check me-3">
+                            <label class="form-check-label" for="photoOption2">
+                                <img src="../../assets/img/2User.jpg" alt="Imagen tortuga marina" id="photoOption">
+                            </label>
+                            <input class="form-check-input" type="radio" name="photoUser" id="photoOption2" value="2">
+                        </div>
+                        <div class="form-check me-3">
+                            <label class="form-check-label" for="photoOption3">
+                                <img src="../../assets/img/3User.jpg" alt="Imagen de una ballena" id="photoOption">
+                            </label>
+                            <input class="form-check-input" type="radio" name="photoUser" id="photoOption3" value="3">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row text center">
+                    <div *ngIf="photoError" id="aviso" class="my-2 text center">
+                        <p>Debes seleccionar una Imagen</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="nameUser" class="form-label">Nombre*</label>
+                        <input type="text" class="form-control" id="nameUser" name="nameUser">
+                        <div *ngIf="nameError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                        <div *ngIf="nameOrgError" id="aviso" class="my-2">
+                            <p>No puedes usar el nombre de una organización activa</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="birthDateUser" class="form-label">Fecha de Nacimiento*</label>
+                        <input type="date" class="form-control" id="birthDateUser" name="birthDateUser">
+                        <div *ngIf="birthError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="surnameUser" class="form-label">Apellido*</label>
+                        <input type="text" class="form-control" id="surnameUser" name="surnameUser">
+                        <div *ngIf="surnameError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="secondSurnameUser" class="form-label">Segundo Apellido</label>
+                        <input type="text" class="form-control" id="secondSurnameUser" name="secondSurnameUser">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="emailUser" class="form-label">Correo Electrónico*</label>
+                    <input type="email" class="form-control" id="emailUser" name="emailUser" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <div *ngIf="emailError" id="aviso" class="my-2">
+                        <p>Este campo no puede quedar vacío</p>
+                    </div>
+                    <div *ngIf="emailSizeError" id="aviso" class="my-2">
+                        <p>Debe tener un formato de correo electrónico válido</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="phoneUser" class="form-label">Teléfono*</label>
+                        <input type="number" class="form-control" id="phoneUser" name="phoneUser">
+                        <div *ngIf="phoneError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                        <div *ngIf="phoneSizeError" id="aviso" class="my-2">
+                            <p>Debe tener 9 dígitos</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="addressUser" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="addressUser" name="addressUser">
+                    </div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-6">
+                        <label class="textoSmall">Los campos marcados con (*) son obligatorios</label>
+                    </div>
+                </div>
+                <div class="row boton">
+                    <button type="button" class="btn btn-primary" (click)="register()">Registrarse</button>
+                </div>    
+            </form>
+        </div>
+    </div>
+</div>

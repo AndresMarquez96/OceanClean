@@ -1,0 +1,77 @@
+<div class="container-fluid contenedor justify-content-center cuerpo">
+    <div class="row justify-content-center contenido">
+        <div class="col-md-12 bloque">
+            <h1 class="text-center">Crear Campaña</h1>
+            <form>
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <label for="nameCamp" class="form-label">Nombre de la Campaña*</label>
+                        <input type="text" class="form-control" id="nameCamp" name="nameCamp">
+                        <div *ngIf="nameError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="addressCamp" class="form-label">Dirección*</label>
+                        <input type="text" class="form-control" id="addressCamp" name="addressCamp">
+                        <div *ngIf="addressError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="provinceCamp" class="form-label">Provincia*</label>
+                        <select class="form-select" id="provinceCamp" name="provinceCamp" [(ngModel)]="provinceCamp" (change)="checkProvince()">
+                          <option value="">Seleccionar Provincia</option>
+                          <option *ngFor="let province of provinces" [value]="province">{{ province }}</option>
+                        </select>
+                        <div *ngIf="proError" id="aviso" class="my-2">
+                          <p>Este campo no puede quedar vacío</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="dateCamp" class="form-label">Fecha*</label>
+                        <input type="date" class="form-control" id="dateCamp" name="dateCamp">
+                        <div *ngIf="dateError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="hourCamp" class="form-label">Hora*</label>
+                        <input type="time" class="form-control" id="hourCamp" name="hourCamp">
+                        <div *ngIf="hourError" id="aviso" class="my-2">
+                            <p>Este campo no puede quedar vacío</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="descCamp" class="form-label">Descripción*</label>
+                    <textarea class="form-control" id="descCamp" name="descCamp"></textarea>
+                    <div *ngIf="descError" id="aviso" class="my-2">
+                        <p>Este campo no puede quedar vacío</p>
+                    </div>
+                    <div *ngIf="descSizeError" id="aviso" class="my-2">
+                        <p>No puede tener más de 255 caracteres</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <label for="imageCamp" class="form-label">Imagen</label>
+                        <input type="text" class="form-control" id="imageCamp" name="imageCamp">
+                    </div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-6">
+                        <label class="textoSmall">Los campos marcados con (*) son obligatorios</label>
+                    </div>
+                </div>
+                <div class="row boton">
+                    <button type="submit" class="btn btn-primary" (click)="crearCamp()">Crear Campaña</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid  mx-4 py-2">
+        <a class="navbar-brand" href="#">
+        <img src="../assets/img/logo.png" alt="Logo" id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center mi-perfil-container" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+            <a class="nav-link" href="/inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/campanas">Campañas</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/compromiso">Compromiso</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/mapas">Mapas interactivos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/organizaciones">Organizaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacto">Contacto</a>
+            </li>
+        </ul>
+        </div>
+        <div class="navbar-nav ms-auto mi-perfil-container">
+          <ng-container [ngSwitch]="users.length > 0">
+            <ng-container *ngSwitchCase="false">
+              <a class="nav-link" href="/logIn">Iniciar Sesión</a>
+              <a class="nav-link" href="/registro">Registrarme</a>
+            </ng-container>
+            <ng-container *ngSwitchCase="true">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ users[0].userNameUser }}
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/perfil">Mi perfil</a></li>
+                    <li><a class="dropdown-item cerrarSession" (click)="logout()">Cerrar sesión</a></li>
+                  </ul>
+                </div>
+                
+              <ng-container *ngIf="users.length > 0 && users[0].roleUser === 0; else elseBlock">
+                <div class="userImgCont">
+                <img [src]="users[0].photoUser" alt="Foto de usuario" id="imgUserAdmin">
+                </div>
+              </ng-container>
+              <ng-template #elseBlock>
+                <div class="userImgCont">
+                <img [src]="'../assets/img/' + users[0].photoUser + 'User.jpg'" alt="Foto de usuario" id="imgUser">
+                </div>
+              </ng-template>
+            </ng-container>
+          </ng-container>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer py-3">
+    <div class="container">
+      <div class="row footerRow" >
+        <div class="col-sm-12 col-md-4 text-center enlacesBloq">
+          <ul class="list-unstyled">
+            <li class="nav-item">
+              <a href="/inicio" class="enlaceFooter">Inicio</a>
+              </li>
+              <li class="nav-item">
+              <a  href="/campanas" class="enlaceFooter">Campañas</a>
+              </li>
+              <li class="nav-item">
+              <a  href="/compromiso" class="enlaceFooter">Compromiso</a>
+              </li>
+              <li class="nav-item">
+              <a  href="/mapas" class="enlaceFooter">Mapas interactivos</a>
+              </li>
+              <li class="nav-item">
+              <a  href="/organizaciones" class="enlaceFooter">Organizaciones</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contacto" class="enlaceFooter">Contacto</a>
+              </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center networkBloq justify-content-center align-items-center">
+          <h5 class="footerTitle">Redes sociales</h5>
+          <ul class="list-unstyled d-flex justify-content-center">
+            <li><a href="#" class="px-2 enlaceFooter" id="instagram"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="#" class="px-2 enlaceFooter" id="linkedin"><i class="bi bi-linkedin"></i></a></li>
+            <li><a href="#" class="px-2 enlaceFooter" id="twitter"><i class="bi bi-twitter"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center logoBloq">
+          <a href="#">
+            <img src="../assets/img/logo.png" alt="Logo" width="100" id="logoFooter">
+          </a>
+          
+        </div>
+      </div>
+    </div>
+</footer>

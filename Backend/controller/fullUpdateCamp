@@ -1,0 +1,22 @@
+const { connection } = require("../config.db");
+
+const fullUpdateCamp = (idCamp, nameCamp, addressCamp, provinceCamp, dateCamp, hourCamp, descCamp, imageCamp, idOrg) => {
+  return new Promise((resolve, reject) => {
+    // Realizar la actualización en la base de datos
+    connection.query(
+      "UPDATE campaigns SET nameCamp = ?, addressCamp = ?, provinceCamp = ?, dateCamp = ?, hourCamp = ?, descCamp = ?, imageCamp = ? WHERE idCamp = ?",
+      [nameCamp, addressCamp, provinceCamp, dateCamp, hourCamp, descCamp, imageCamp, idCamp],
+      (error, results) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(results);
+        }
+      }
+    );
+  });
+};
+
+module.exports = {
+  fullUpdateCamp
+};

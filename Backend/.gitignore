@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compilación de Angular
+dist/
+out-tsc/
+
+# Directorios temporales y cachés
+.tmp/
+.temp/
+
+# Configuraciones de entornos (excluye claves y configuraciones sensibles)
+src/environments/environment.ts
+src/environments/environment.prod.ts
+
+# Archivos de configuración del sistema
+.DS_Store
+Thumbs.db
+
+# Configuraciones específicas de IDE
+.idea/
+.vscode/
+
+# Archivos de empaquetado y binarios
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Configuraciones específicas del sistema operativo
+*.log

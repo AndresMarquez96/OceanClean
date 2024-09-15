@@ -1,0 +1,112 @@
+.color{--prussian-blue: #012a4aff;}
+.color{--indigo-dye: #013a63ff;}
+.color{--indigo-dye-2: #01497cff;}
+.color{--indigo-dye-3: #014f86ff;}
+.color{--ucla-blue: #2a6f97ff;}
+.color{--cerulean: #2c7da0ff;}
+.color{--air-force-blue: #468fafff;}
+.color{--air-superiority-blue: #61a5c2ff;}
+.color{--sky-blue: #89c2d9ff;}
+.color{--light-blue: #a9d6e5ff;}
+
+.cuerpo{
+  font-family: 'Corben', serif;
+  font-size: 1.5rem;
+}
+
+.cuerpoSelect{
+  font-family: 'Corben', serif;
+}
+
+.dark-overlay-section {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/img/fondoCampanas.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dark-overlay-section h1{
+  font-family: 'Finger Paint', cursive;
+  color: #a9d6e5ff;
+  font-size: 4rem;
+}
+
+.card {
+  border: 2px solid #013a63ff;;
+}
+.campanasCards{
+width: 100%;
+}
+
+.bloque{
+  overflow-x: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 85%;
+}
+
+.card-img-top{
+  height: 20rem;
+  width: 100%;
+}
+
+.org-logo {
+  width: 4rem;
+  height: 4rem;
+  margin-top: -6rem;
+}
+
+h5{
+  font-family: 'Finger Paint', cursive;
+  color: #2a6f97ff;
+  font-size: 2rem;
+}
+strong{
+  color: #013a63ff;
+}
+
+
+.mi-perfil-container a {
+  font-family: 'Finger Paint', cursive;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #013a63ff; /* Ajusta el color del enlace según tu preferencia */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mi-perfil-container a:hover {
+  color: #013a63ff;
+  transform: translate(0, -3px); /* Ajusta la cantidad de desplazamiento vertical */
+ 
+}
+
+.mi-perfil-container a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Ajusta la distancia del levantamiento */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Ajusta el grosor del levantamiento */
+  background-color: #013a63ff;; /* Ajusta el color del levantamiento */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.mi-perfil-container a:hover:before {
+  transform: scaleX(1);
+}
+
+select{
+  border-color: #013a63ff;
+}
+
+@media (max-width: 576px) {
+  .col-md-4 {
+    margin-bottom: 20px;
+  }
+}

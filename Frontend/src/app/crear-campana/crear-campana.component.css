@@ -1,0 +1,87 @@
+.color{--prussian-blue: #012a4aff;}
+.color{--indigo-dye: #013a63ff;}
+.color{--indigo-dye-2: #01497cff;}
+.color{--indigo-dye-3: #014f86ff;}
+.color{--ucla-blue: #2a6f97ff;}
+.color{--cerulean: #2c7da0ff;}
+.color{--air-force-blue: #468fafff;}
+.color{--air-superiority-blue: #61a5c2ff;}
+.color{--sky-blue: #89c2d9ff;}
+.color{--light-blue: #a9d6e5ff;}
+
+.cuerpo{
+    font-family: 'Corben', serif;
+  }
+  .cuerpo h1{
+    color: #013a63ff;
+    font-family: 'Finger Paint', cursive;
+  }
+  .cuerpo label{
+    font-size: 1.5rem;
+    color: #013a63ff;
+    font-family: 'Finger Paint', cursive;
+  }
+.contenido{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 80%;
+}
+  .bloque {
+    background-color: rgba(169, 214, 229, 0.623);
+    padding: 2rem;
+}
+  .contenedor {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/img/imagen4.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+  button {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: #013a63ff;
+    border: none;
+    transition: all 1s ease;
+    position: relative;
+    border-radius: 50px;
+}
+button:hover{
+    background: #013a63ff; 
+}
+.boton{
+    padding: 1rem;
+    padding-top: 4rem;
+}
+
+#photoOption{
+    height: 150px;
+    width: 150px;
+}
+.textoSmall{
+  color:#013a63ff !important;
+  font-family: 'Corben', serif !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+#aviso{
+  color: red;
+  background-color: rgb(218, 193, 193);
+  border-color: none;
+}
+#aviso p{
+  padding: 2%;
+}
+@media only screen and (max-width: 767px) {
+    .contenido{
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+    }
+  }

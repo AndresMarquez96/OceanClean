@@ -1,0 +1,56 @@
+<!-- Bloque de portada -->
+<section class="dark-overlay-section">
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col text-center">
+        <h1>Mapas</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Bloque contenido -->
+<div class="container cuerpo">
+  <div class="row py-5">
+    <div class="col text-center">
+      <h1>Introducción</h1>
+      <p>Selecciona uno de los mapas a continuación para explorar las diferentes informaciones:</p>
+      <button class="btn  my-3 mx-3" (click)="showMap(1)">Banderas Negras</button>
+      <button class="btn  my-3 mx-3" (click)="showMap(2)">European Environment Agency</button>
+      <button class="btn  my-3 mx-3" (click)="showMap(3)">Ocean Conservancy</button>
+    </div>
+  </div>
+  <div class="row" *ngIf="selectedMap !== 0">
+    <div class="col-lg-9 py-5">
+      <div id="mapContainer">
+        <div id="map1" *ngIf="selectedMap === 1">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1Go2iMplDBfwiq_lJQEvDL3VP0VC2S4o&ehbc=2E312F" frameborder="0" width="100%" height="400"></iframe>
+        </div>
+        <div id="map2" *ngIf="selectedMap === 2">
+          <iframe src="https://discomap.eea.europa.eu/Bathingwater/" frameborder="0" width="100%" height="400"></iframe>
+        </div>
+        <div id="map3" *ngIf="selectedMap === 3">
+          <iframe src="https://oceanconservancy.org/trash-free-seas/international-coastal-cleanup/map/" frameborder="0" width="100%" height="400"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 py-5">
+      <div id="mapText">
+        <div id="text1" *ngIf="selectedMap === 1">
+          <h2>Mapa Banderas Negras</h2>
+          <p>El Mapa de Banderas Negras muestra las playas que han sido calificadas con la distinción de "Bandera Negra". Estas banderas se otorgan a las playas que no cumplen con los estándares de calidad ambiental y sanitaria establecidos.</p>
+          <p>Este mapa te permite explorar las diferentes playas que han sido identificadas con la Bandera Negra y conocer los motivos por los que no cumplen con los criterios establecidos. Además, podrás obtener información sobre las medidas que se están tomando para mejorar la calidad de estas playas y promover su recuperación.</p>
+        </div>
+        <div id="text2" *ngIf="selectedMap === 2">
+          <h2>Mapa Agencia europea medioambiental</h2>
+          <p>El Mapa de la Agencia Europea Medioambiental muestra la calidad de las aguas bañables en diferentes ubicaciones. Esta herramienta proporciona información detallada sobre la calidad del agua, incluyendo parámetros como la concentración de bacterias y otros contaminantes.</p>
+          <p>Con este mapa, puedes explorar diferentes playas y zonas de baño en Europa para conocer su calidad de agua actual. Además, podrás obtener información sobre las medidas tomadas para garantizar una mayor calidad del agua y asegurar la seguridad de los bañistas.</p>
+        </div>
+        <div id="text3" *ngIf="selectedMap === 3">
+          <h2>Mapa "Ocean Conservancy"</h2>
+          <p>El Mapa "Ocean Conservancy" es una herramienta interactiva que muestra información sobre la limpieza de las costas y playas en todo el mundo. Este mapa destaca los esfuerzos realizados por voluntarios y organizaciones para eliminar la basura marina y proteger nuestros océanos.</p>
+          <p>Al explorar este mapa, podrás ver las áreas donde se han llevado a cabo campañas de limpieza y las cantidades de desechos recolectados. También podrás conocer las historias de éxito y los proyectos en curso para mitigar la contaminación marina.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

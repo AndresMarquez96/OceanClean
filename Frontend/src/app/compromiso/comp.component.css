@@ -1,0 +1,85 @@
+.color{--prussian-blue: #012a4aff;}
+.color{--indigo-dye: #013a63ff;}
+.color{--indigo-dye-2: #01497cff;}
+.color{--indigo-dye-3: #014f86ff;}
+.color{--ucla-blue: #2a6f97ff;}
+.color{--cerulean: #2c7da0ff;}
+.color{--air-force-blue: #468fafff;}
+.color{--air-superiority-blue: #61a5c2ff;}
+.color{--sky-blue: #89c2d9ff;}
+.color{--light-blue: #a9d6e5ff;}
+
+.cuerpo{
+  font-family: 'Corben', serif;
+}
+.cuerpo h1{
+  color: #012a4aff;
+  font-family: 'Finger Paint', cursive;
+}
+.cuerpo h2{
+  font-size: 1.5rem;
+  color: #468fafff;
+  font-family: 'Finger Paint', cursive;
+}
+/* Portada */
+.dark-overlay-section {
+  height: 60vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/img/fondoCampanas.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dark-overlay-section h1{
+  font-family: 'Finger Paint', cursive;
+  color: #a9d6e5ff;
+  font-size: 4rem;
+}
+/* Texto1 */
+#historia-organizacion img{
+  width: 25rem;
+  height: 23rem;
+  border-radius: 50%;
+  border: solid 3px;
+  border-color: #013a63ff;
+}
+.fotoEquipo{
+  padding-left: 1rem;
+}
+
+/* Call Action */
+.bloq1 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+.callAction{
+background-color: #61a5c2ff;
+}
+.callActionCol {
+height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #fff;
+border-radius: 10px;
+}
+
+.text-center h5 {
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+.callActionCol p{
+font-size: 3rem;
+font-weight: bold;
+font-family: 'Finger Paint', cursive;
+}
+.callActionCol h5{
+font-size: 2rem;
+font-family: 'Finger Paint', cursive;
+
+}
